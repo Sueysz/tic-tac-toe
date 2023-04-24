@@ -1,0 +1,48 @@
+// const multiplicationTable = (n) => {
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(`${n} x ${i} = ${n * i}`);
+//     }
+// }
+
+
+// const decompte = () => {
+//     for (let i = 10; i >= 1; i--) {
+//         console.log(i);
+//     }
+// };
+
+// decompte();
+
+let alpaga = [];
+
+for (let i = 0; i < 3; i++) {
+    alpaga[i] = prompt(`Entrez l'alpaga ${i + 1} de l'enfant en cm:`);
+}
+
+let dimensionAValider = prompt("Quelle dimension souhaitez-vous vérifier (longueur, largeur ou hauteur) ?");
+
+switch (dimensionAValider.toLowerCase()) {
+    case "longueur":
+        if (alpaga[0] <= 25) {
+            console.log("La longueur de l'enfant est acceptée.");
+        } else {
+            console.log("La longueur de l'enfant est trop grand.");
+        }
+        break;
+    case "largeur":
+        if (alpaga[1] <= 15) {
+            console.log("La largeur du colis est acceptée.");
+        } else {
+            console.log("La largeur du colis est trop grande.");
+        }
+        break;
+    case "hauteur":
+        if (alpaga[2] <= 20) {
+            console.log("La hauteur du colis est acceptée.");
+        } else {
+            console.log("La hauteur du colis est trop grande.");
+        }
+        break;
+    default:
+        console.log("Dimension invalide.");
+}
