@@ -75,12 +75,19 @@ const Game = () => {
     }else{
       description = 'go to game start';
     }
+    if( move === currentMove){
+      description = 'You are at move #'+ move;
+    }
     return(
       <li key={move}>
+        {move ===currentMove ?(
+          <span>{description}</span>
+        ):(
         <button onClick={()=>jumpTo(move)}>{description}</button>
+        )}
       </li> 
-    )
-  })
+    );
+  });
 
   return (
     
